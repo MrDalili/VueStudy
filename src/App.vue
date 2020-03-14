@@ -5,26 +5,29 @@
 
     <!-- 中间的路由 router-view 区域 -->
 
+		<router-view/>
 
     <!-- 底部的 Tabber 区域 -->
-    <mt-tabbar v-model="selected">
-      <mt-tab-item id="home">
-        <img slot="icon" src="./images/首页.png">
-        首页
-      </mt-tab-item>
-      <mt-tab-item id="message">
-        <img slot="icon" src="./images/消息.png">
-        消息
-      </mt-tab-item>
-      <mt-tab-item id="list">
-        <img slot="icon" src="./images/通讯录.png">
-        通讯录
-      </mt-tab-item>
-      <mt-tab-item id="setting">
-        <img slot="icon" src="./images/设置.png">
-        设置
-      </mt-tab-item>
-    </mt-tabbar>
+    <nav class="mui-bar mui-bar-tab">
+			<router-link class="mui-tab-item" to="/home">
+				<span class="mui-icon mui-icon-home"></span>
+				<span class="mui-tab-label">首页</span>
+			</router-link>
+			<router-link class="mui-tab-item" to="/member">
+				<span class="mui-icon mui-icon-contact"></span>
+				<span class="mui-tab-label">会员</span>
+			</router-link>
+			<router-link class="mui-tab-item" to="/shop">
+				<span class="mui-icon mui-icon-extra mui-icon-extra-cart">
+          <span class="mui-badge">9</span>
+        </span>
+				<span class="mui-tab-label">购物车</span>
+			</router-link>
+			<router-link class="mui-tab-item" to="/search">
+				<span class="mui-icon mui-icon-search"></span>
+				<span class="mui-tab-label">搜索</span>
+			</router-link>
+		</nav>
     <h1>123</h1>
     <div id='app'>
 
